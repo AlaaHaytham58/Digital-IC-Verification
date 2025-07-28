@@ -1,0 +1,172 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /top
+=== Design Unit: work.top
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/top/#ublk#31584#32/immed__34
+                     testbench_.sv(34)                  0          1
+
+=================================================================================
+=== Instance: /testbench__sv_unit
+=== Design Unit: work.testbench__sv_unit
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          4        na        na        na
+            Covergroup Bins         19        19         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /testbench__sv_unit/coverage_test/cg            100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_point                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_range                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_transition                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_ignore                              100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench__sv_unit::coverage_test::cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_point                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin alu_ops                                    597957          1          -    Covered              
+        bin load_str                                   396420          1          -    Covered              
+        bin misc_ops                                   797898          1          -    Covered              
+    Coverpoint cp_range                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low                                        796454          1          -    Covered              
+        bin mid                                        796355          1          -    Covered              
+        bin high                                      1593979          1          -    Covered              
+    Coverpoint cp_transition                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin load_to_str                                 12479          1          -    Covered              
+        bin alu_seq                                       799          1          -    Covered              
+    Coverpoint cp_ignore                              100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegalop                          199166                     -    Occurred             
+        ignore_bin resevedop                           796435                     -    Occurred             
+        bin auto[0]                                    199225          1          -    Covered              
+        bin auto[1]                                    198197          1          -    Covered              
+        bin auto[2]                                    198223          1          -    Covered              
+        bin auto[3]                                    199242          1          -    Covered              
+        bin auto[4]                                    199142          1          -    Covered              
+        bin auto[5]                                    199727          1          -    Covered              
+        bin auto[6]                                    199088          1          -    Covered              
+        bin auto[7]                                    199507          1          -    Covered              
+        bin auto[8]                                    199924          1          -    Covered              
+        bin auto[13]                                   199471          1          -    Covered              
+        bin auto[14]                                   199441          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /testbench__sv_unit/coverage_test/cg            100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_point                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_range                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_transition                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_ignore                              100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/testbench__sv_unit::coverage_test::cg  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    19         19          -                      
+    missing/total bins:                                     0         19          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_point                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin alu_ops                                    597957          1          -    Covered              
+        bin load_str                                   396420          1          -    Covered              
+        bin misc_ops                                   797898          1          -    Covered              
+    Coverpoint cp_range                               100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low                                        796454          1          -    Covered              
+        bin mid                                        796355          1          -    Covered              
+        bin high                                      1593979          1          -    Covered              
+    Coverpoint cp_transition                          100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin load_to_str                                 12479          1          -    Covered              
+        bin alu_seq                                       799          1          -    Covered              
+    Coverpoint cp_ignore                              100.00%        100          -    Covered              
+        covered/total bins:                                11         11          -                      
+        missing/total bins:                                 0         11          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin illegalop                          199166                     -    Occurred             
+        ignore_bin resevedop                           796435                     -    Occurred             
+        bin auto[0]                                    199225          1          -    Covered              
+        bin auto[1]                                    198197          1          -    Covered              
+        bin auto[2]                                    198223          1          -    Covered              
+        bin auto[3]                                    199242          1          -    Covered              
+        bin auto[4]                                    199142          1          -    Covered              
+        bin auto[5]                                    199727          1          -    Covered              
+        bin auto[6]                                    199088          1          -    Covered              
+        bin auto[7]                                    199507          1          -    Covered              
+        bin auto[8]                                    199924          1          -    Covered              
+        bin auto[13]                                   199471          1          -    Covered              
+        bin auto[14]                                   199441          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/top/#ublk#31584#32/immed__34
+                     testbench_.sv(34)                  0          1
+
+Total Coverage By Instance (filtered view): 100.00%
+
