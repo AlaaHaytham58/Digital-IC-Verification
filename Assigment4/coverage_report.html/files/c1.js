@@ -1,0 +1,2 @@
+var g_data = {"13":{"cvpc":[{"h":["cp1",4,1,14],"cov":[256,1,0.39],"opts":{"goal":"100"}},{"h":["cp2",4,1,15],"cov":[4,0,0.00],"opts":{"goal":"100"}},{"h":["cp3",4,1,16],"cov":[2,1,50.00],"opts":{"goal":"100"}},{"h":["cp4",4,1,17],"cov":[2,1,50.00],"opts":{"goal":"100"}},{"h":["cp5",4,1,18],"cov":[2,0,0.00],"opts":{"goal":"100"}}],"cvg":["/uart_packet/covergroup_class/cg",1],"cvgdata":[266,3,0,0]}};
+processCoverpointsData(g_data);

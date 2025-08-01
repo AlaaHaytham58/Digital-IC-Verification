@@ -1,0 +1,2 @@
+var g_data = {"12":{"pr":"/uart_packet","ty":2,"dui":2,"dun":"work.uart_packet","cvgs":[{"h":["/uart_packet/covergroup_class/cg",1,1,13],"cov":[266,3,20.07],"opts":{"goal":"100","merge_instance":"auto(true)"}}]}};
+processCovergroupsData(g_data);

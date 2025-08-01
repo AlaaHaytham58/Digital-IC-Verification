@@ -12,8 +12,8 @@ module uart_tb;
     wire tx;
     bit tx_busy;
 
-    bit [9:0] actual_queue[$];
-    bit [9:0] expected_value[$];
+    bit [10:0] actual_queue[$];
+    bit [10:0] expected_value[$];
     // Instantiate DUT
     uart_tx DUT(.*);
     initial begin
@@ -22,14 +22,19 @@ module uart_tb;
     end
 
     initial begin
+        rst_n = 0;
+        #10ns;
+        rst_n = 1;
         func_imp = new();
 
-        for (int i = 0; i < 100; i++) begin
+       repeat (100) begin
+            @(negedge tx_busy);
             generate_stimulus(func_imp);
             drivestim(func_imp);
-            collect_output( actual_queue);
+            collect_output( func_imp);
             golden_model(expected_value);
             check_output(actual_queue, expected_value);
+           
         end
 
         $stop;
@@ -47,12 +52,12 @@ module uart_tb;
 
     task automatic drivestim(ref functionsImp f);
         @(negedge clk);
-        rst_n        = f.rst_n;
-        tx_start     = f.tx_start;
         data_in      = f.data_in;
         parity_en    = f.parity_en;
         even_parity  = f.even_parity;
-        wait (tx_busy);
+        tx_start=1;
+        @(negedge clk);
+        tx_start=0;
     endtask
 
   
@@ -75,21 +80,25 @@ module uart_tb;
 
         expected_value.push_back(1); // Stop bit
     endfunction
-    task automatic collect_output( ref bit [9:0] actual_queue[$]);
-        bit serial_bits[$];
-        int totalbits = 1 + 8 + (parity_en ? 1 : 0) + 1;
-        actual_queue.delete();
-        if (tx_start) begin
-           wait (tx == 0); 
-        end
-        wait (tx_start);
-        for (int i = 0; i < totalbits; i++) begin
+    task automatic collect_output( ref functionsImp f);
+        logic [10:0] collected;
+        if(f.parity_en)begin
             @(posedge clk);
-            serial_bits.push_back(tx);
+            for (int i = 0; i < 11; i++) begin
+                @(negedge clk);
+                collected[i] =tx;
+            end
+        end 
+        else begin
+            @(posedge clk);
+            for (int i = 0; i < 10; i++) begin
+                @(negedge clk);
+                collected[i] =tx;
+            end
+            collected[10] = 1; // Stop bit
         end
-
-        foreach (serial_bits[i])
-            actual_queue.push_back(serial_bits[i]);
+        actual_queue.push_back(collected);
+        $display("DONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNE");
     endtask
 
     // Check actual vs expected output
