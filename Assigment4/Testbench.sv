@@ -61,8 +61,7 @@ module uart_tb(uart_if.TEST interface_test);
         int bits_to_collect = f.parity_en ? 11 : 10;
         int i;
 
-        actual_queue.delete(); =
-
+        actual_queue.delete(); 
         @(posedge interface_test.clk);
         for (i = 0; i < bits_to_collect; i++) begin
             @(negedge interface_test.clk);
@@ -95,3 +94,4 @@ module uart_tb(uart_if.TEST interface_test);
     endfunction
 
 endmodule
+ 
